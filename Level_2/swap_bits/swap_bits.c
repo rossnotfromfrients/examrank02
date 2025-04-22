@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h> */
+#include <stdio.h>
 
 unsigned char	swap_bits(unsigned char octet)
 {
-	return (octet >> 4 | octet << 4);
+	return ((octet & 0xF0) >> 4) | ((octet & 0x0F) << 4);
 }
 
 /* int	main(void)
